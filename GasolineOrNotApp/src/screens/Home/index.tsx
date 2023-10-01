@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./style"
-import {TouchableWithoutFeedback, TouchableOpacity, TextInput, Keyboard, Alert, Text, View} from 'react-native';
+import {TouchableWithoutFeedback, TouchableOpacity, TextInput, Keyboard, Alert, Text, View, SafeAreaView} from 'react-native';
 
 interface Props {
     name: string
@@ -10,10 +10,16 @@ const Home: React.FC<Props> = (name) => {
     const [value, setValue] = useState()
 
     return(
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <SafeAreaView>
             <View style={styles.container}>
+                <TextInput>
 
+                </TextInput>
+                
+                <TextInput>
+                    
+                </TextInput>
             </View>
-        </TouchableWithoutFeedback>
+        </SafeAreaView>
     )
 }
